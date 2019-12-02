@@ -3,7 +3,9 @@
 # YOUR CODE HERE
 
 def is_even(test):
+    #declare function is_even(test)
     if(test % 2 ==0):
+        #if test is divisible by 2
         print("Even")
         return True
     else:
