@@ -4,7 +4,10 @@
 # YOUR CODE HERE
 
 class LatLon():
+    #class LatLon (base)
     def  __init__(self, lat, lon):
+      #The __init__ method is roughly what represents a constructor in Python
+      #self parameter refers to the instance of the object (this kind of)
         self.lat = lat
         self.lon = lon
 place = LatLon(10,20)
@@ -15,11 +18,17 @@ print(place.lon)
 
 # YOUR CODE HERE
 class Waypoint(LatLon):
+  #class Waypoint that will inherit from LatLon(subclass)(child)
     def __init__(self,name, lat, lon):
+      #The __init__ method is roughly what represents a constructor in Python
+      #self parameter refers to the instance of the object (this kind of)
         super().__init__(lat, lon)
+            #super() lets you avoid referring to the base class explicitly
         self.name = name
     def __str__(self):
-        return f"{self.name}'s location is lat: {self.lat}, lon: {self.lon}"
+          #Pythonic way to convert Python objects into strings by using __str__
+        return F"{self.name}'s location is lat: {self.lat}, lon: {self.lon}"
+    #f-string used above
 newPlace = Waypoint("My house maybe", 40, 50)
 print(newPlace.name)
 
@@ -29,15 +38,20 @@ print(newPlace.name)
 
 # YOUR CODE HERE
 class Geocache(Waypoint):
+    #class Geocache that will inherit from Waypoint(subclass)(child)
   def __init__(self, name, difficulty, size, lat, lon):
+      #The __init__ method is roughly what represents a constructor in Python
+      #self parameter refers to the instance of the object (this kind of)
     super().__init__(name, lat, lon)
+    #super() lets you avoid referring to the base class explicitly
     self.difficulty = difficulty
     self.size = size
 
   def __str__(self):
-    return f"Geocache {self.name}, diff {self.difficulty}, size {self.size}, {self.lat}, {self.lon}"
-
-newMomsPlace = Geocache('Latisha', 'Hard', 'XXL', 69, 68 )
+    #Pythonic way to convert Python objects into strings by using __str__
+    return F"Geocache {self.name}, diff {self.difficulty}, size {self.size}, {self.lat}, {self.lon}"
+    #f-string used above
+newMomsPlace = Geocache('This', 'meh', 'Large', 69, 68 )
 
 print( newMomsPlace.difficulty)
 
