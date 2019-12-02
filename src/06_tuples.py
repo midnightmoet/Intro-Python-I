@@ -39,11 +39,18 @@ print("Distance is: {:.2f}".format(dist(a, b)))
 t = (1, 2, 5, 7, 99)
 # print_tuple(t)  # Prints 1 2 5 7 99, one per line
 
+#functions are defined by using the def keyword followed by foobar(banana word)
+#followed by a set of () which hold any parameters needed
+#end with a colon :
 def print_tuple(array):
+    # def function-name(parameter)
     for x in array:
+        #for  item in array
         print(x)
+        #print(item)
 
 print_tuple(t)
+#declare function(list we made)
 
 # Declare a tuple of 1 element then print it
 u = (1,)  # What needs to be added to make this work?
